@@ -1,0 +1,152 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="description" content="FlowDiff turns redacted dictation UX traces into a parity report.">
+    <meta name="theme-color" content="#f4efe8">
+    <title>FlowDiff | Make voice UX diffable</title>
+    <link rel="stylesheet" href="styles.css">
+  </head>
+  <body>
+    <!--
+      Design read: developer-tool landing page for engineers and curious builders.
+      The visual language borrows the reference's warm editorial surface and
+      split hero, while using original copy, assets, and product evidence.
+      Dials: variance 7, motion 4, density 3.
+    -->
+    <header class="site-header shell">
+      <a class="brand-chip" href="#top" aria-label="FlowDiff home">
+        <span class="brand-mark" aria-hidden="true">F</span>
+        <span>FlowDiff</span>
+      </a>
+      <nav class="nav-shell" aria-label="Primary navigation">
+        <a href="#method">Method</a>
+        <a href="#schema">Schema</a>
+        <a class="nav-repo" href="https://github.com/henryvn27/flowdiff">GitHub <span aria-hidden="true">↗</span></a>
+      </nav>
+    </header>
+
+    <main id="top">
+      <section class="hero shell" aria-labelledby="hero-title">
+        <div class="hero-copy reveal">
+          <p class="eyebrow">VOICE UX / EVIDENCE KIT</p>
+          <h1 id="hero-title">Make voice UX <em>diffable.</em></h1>
+          <p class="hero-lede">Compare redacted capability traces and catch regressions before they become a debate.</p>
+          <div class="hero-actions">
+            <a class="button button-primary" href="https://github.com/henryvn27/flowdiff">Open the repo <span aria-hidden="true">↗</span></a>
+            <a class="button button-secondary" href="#schema">See the schema</a>
+          </div>
+          <button class="command-bar" type="button" data-copy="python3 server.py --demo --format markdown" aria-label="Copy the FlowDiff demo command">
+            <span class="prompt-sign" aria-hidden="true">$</span>
+            <code>python3 server.py --demo --format markdown</code>
+            <span class="copy-label" aria-live="polite">Copy</span>
+          </button>
+          <p class="command-note">Local only. Nothing is uploaded.</p>
+        </div>
+
+        <figure class="hero-visual reveal reveal-late">
+          <img class="paper-texture" src="assets/paper-texture.png" alt="" aria-hidden="true">
+          <div class="report-frame">
+            <div class="report-topline">
+              <span>synthetic report</span>
+              <span>redacted trace only</span>
+            </div>
+            <img src="assets/flowdiff-demo.svg" alt="Synthetic FlowDiff parity report comparing baseline and candidate dictation capabilities">
+          </div>
+          <figcaption>One trace in. One decision out.</figcaption>
+        </figure>
+      </section>
+
+      <section class="signal-section shell" aria-labelledby="signal-title">
+        <div class="section-intro">
+          <h2 id="signal-title">The comparison should survive the feeling.</h2>
+          <p>FlowDiff gives a side-by-side test a stable vocabulary, so the next check starts from evidence instead of memory.</p>
+        </div>
+        <div class="signal-layout">
+          <article class="signal-feature">
+            <p class="feature-kicker">THE PAYOFF</p>
+            <h3>Find the gap while it is still cheap to fix.</h3>
+            <p>Activation can feel great while recovery, history, or multi-display behavior quietly falls behind. FlowDiff makes that gap visible.</p>
+            <a class="text-link" href="#schema">Read the contract <span aria-hidden="true">→</span></a>
+          </article>
+          <ul class="capability-list" aria-label="FlowDiff capability checks">
+            <li><span>Activation</span><span class="list-note">start cleanly</span></li>
+            <li><span>Recording feedback</span><span class="list-note">show the state</span></li>
+            <li><span>Insertion</span><span class="list-note">finish the handoff</span></li>
+            <li><span>Settings</span><span class="list-note">keep the choice</span></li>
+            <li><span>History</span><span class="list-note">know what remains</span></li>
+            <li><span>Privacy</span><span class="list-note">show the boundary</span></li>
+            <li><span>Recovery</span><span class="list-note">return from failure</span></li>
+            <li><span>Multi-display</span><span class="list-note">follow the user</span></li>
+          </ul>
+        </div>
+      </section>
+
+      <section id="method" class="method-section shell" aria-labelledby="method-title">
+        <div class="section-intro narrow-intro">
+          <p class="eyebrow">A SMALLER LOOP</p>
+          <h2 id="method-title">Redact. Compare. Decide.</h2>
+          <p>Keep the trace human-authored and bounded. Let the report carry the repeatable part.</p>
+        </div>
+        <ol class="method-list">
+          <li>
+            <span class="method-number" aria-hidden="true">01</span>
+            <div><h3>Redact</h3><p>Record outcomes and evidence codes, never dictated text or screenshots.</p></div>
+          </li>
+          <li>
+            <span class="method-number" aria-hidden="true">02</span>
+            <div><h3>Compare</h3><p>Normalize the two traces into one capability matrix with bounded timing deltas.</p></div>
+          </li>
+          <li>
+            <span class="method-number" aria-hidden="true">03</span>
+            <div><h3>Decide</h3><p>Share a compact report that names the gap and the next useful check.</p></div>
+          </li>
+        </ol>
+      </section>
+
+      <section id="schema" class="schema-section shell" aria-labelledby="schema-title">
+        <div class="section-intro">
+          <h2 id="schema-title">A trace should be small enough to trust.</h2>
+          <p>The public contract accepts eight capability events, bounded statuses, and allowlisted evidence codes. Unknown fields fail closed.</p>
+        </div>
+        <div class="schema-layout">
+          <pre class="schema-code" aria-label="FlowDiff trace schema example"><code>{
+  <span class="code-key">"schema_version"</span>: <span class="code-string">"1"</span>,
+  <span class="code-key">"app"</span>: <span class="code-string">"Candidate"</span>,
+  <span class="code-key">"events"</span>: [{
+    <span class="code-key">"capability"</span>: <span class="code-string">"activation"</span>,
+    <span class="code-key">"status"</span>: <span class="code-string">"pass"</span>,
+    <span class="code-key">"duration_ms"</span>: <span class="code-number">150</span>,
+    <span class="code-key">"evidence_codes"</span>: [<span class="code-string">"bar_opened"</span>]
+  }]
+}</code></pre>
+          <aside class="schema-aside">
+            <div class="aside-rule"></div>
+            <h3>What stays out</h3>
+            <p>Audio, transcripts, message bodies, clipboard contents, URLs, local paths, credentials, and personal identifiers.</p>
+            <a class="text-link" href="https://github.com/henryvn27/flowdiff/blob/main/README.md#privacy-contract">Read the privacy contract <span aria-hidden="true">↗</span></a>
+          </aside>
+        </div>
+      </section>
+
+      <section class="closing-section shell" aria-labelledby="closing-title">
+        <div class="closing-panel">
+          <div>
+            <p class="feature-kicker">OPEN SOURCE / LOCAL FIRST</p>
+            <h2 id="closing-title">Make the next comparison easier.</h2>
+          </div>
+          <a class="button button-dark" href="https://github.com/henryvn27/flowdiff">Open FlowDiff <span aria-hidden="true">↗</span></a>
+        </div>
+      </section>
+    </main>
+
+    <footer class="site-footer shell">
+      <span>FlowDiff</span>
+      <span>No audio. No transcripts. No cloud.</span>
+      <a href="https://github.com/henryvn27/flowdiff">GitHub <span aria-hidden="true">↗</span></a>
+    </footer>
+
+    <script src="site.js"></script>
+  </body>
+</html>

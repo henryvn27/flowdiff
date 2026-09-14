@@ -6,6 +6,8 @@ FlowDiff turns a small, redacted capability trace into a parity matrix. It is
 for the moment after you test two dictation apps and realize the comparison
 should be repeatable, reviewable, and much less vibes-based.
 
+[Open the FlowDiff site](https://henryvn27.github.io/flowdiff/)
+
 ![Synthetic FlowDiff report](docs/flowdiff-demo.svg)
 
 FlowDiff is a local-first Codex plugin and dependency-free Python tool. It
