@@ -76,7 +76,7 @@ bounded per capability so arbitrary notes cannot leak into a report.
 FlowDiff is intentionally strict:
 
 - no audio, transcripts, message bodies, clipboard contents, screenshots, URLs,
-  paths, contact details, credentials, or persistent identifiers;
+  paths, contact details, credentials, or persistent personal identifiers;
 - no network client, database, telemetry, or cache;
 - no arbitrary fields in traces;
 - no storage of inputs after a tool call;

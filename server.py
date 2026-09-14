@@ -404,7 +404,7 @@ def compare_traces(baseline: Any, candidate: Any) -> dict[str, Any]:
         "redaction": {
             "input": "sanitized capability events only",
             "storage": "none",
-            "output": "no dictated text, screenshots, paths, URLs, or identifiers",
+            "output": "no dictated text, screenshots, paths, URLs, or personal identifiers",
         },
     }
 
@@ -462,7 +462,7 @@ def render_markdown(report: Mapping[str, Any]) -> str:
             "",
             "This report is derived from sanitized capability labels and bounded "
             "evidence codes. FlowDiff stores nothing and never accepts dictated "
-            "text, screenshots, paths, URLs, or identifiers.",
+            "text, screenshots, paths, URLs, or personal identifiers.",
         ]
     )
     return "\n".join(lines) + "\n"

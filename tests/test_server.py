@@ -80,6 +80,7 @@ class FlowDiffTests(unittest.TestCase):
         self.assertIn("# FlowDiff report", markdown)
         self.assertIn("## Capability matrix", markdown)
         self.assertIn("## Privacy contract", markdown)
+        self.assertIn("personal identifiers", markdown)
         self.assertNotIn("private-app", markdown)
         self.assertNotIn("http://", markdown)
         self.assertNotIn("https://", markdown)
