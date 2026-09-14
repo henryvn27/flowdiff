@@ -1,0 +1,112 @@
+{
+  "baseline": {
+    "schema_version": "1",
+    "app": "Baseline",
+    "run_id": "demo-baseline",
+    "events": [
+      {
+        "capability": "activation",
+        "status": "pass",
+        "duration_ms": 180,
+        "evidence_codes": ["shortcut_fired", "bar_opened"]
+      },
+      {
+        "capability": "recording_feedback",
+        "status": "pass",
+        "duration_ms": 240,
+        "evidence_codes": ["recording_indicator", "timer_visible"]
+      },
+      {
+        "capability": "insertion",
+        "status": "pass",
+        "duration_ms": 420,
+        "evidence_codes": ["target_focused", "text_inserted"]
+      },
+      {
+        "capability": "settings",
+        "status": "pass",
+        "duration_ms": 310,
+        "evidence_codes": ["settings_opened", "shortcut_configured"]
+      },
+      {
+        "capability": "history",
+        "status": "pass",
+        "duration_ms": 390,
+        "evidence_codes": ["history_visible", "history_searchable"]
+      },
+      {
+        "capability": "privacy",
+        "status": "pass",
+        "duration_ms": 160,
+        "evidence_codes": ["local_only_copy", "retention_visible"]
+      },
+      {
+        "capability": "recovery",
+        "status": "pass",
+        "duration_ms": 520,
+        "evidence_codes": ["restart_recovered", "error_recovered"]
+      },
+      {
+        "capability": "multi_display",
+        "status": "pass",
+        "duration_ms": 280,
+        "evidence_codes": ["display_switch_ok", "bar_repositioned"]
+      }
+    ]
+  },
+  "candidate": {
+    "schema_version": "1",
+    "app": "Candidate",
+    "run_id": "demo-candidate",
+    "events": [
+      {
+        "capability": "activation",
+        "status": "pass",
+        "duration_ms": 150,
+        "evidence_codes": ["shortcut_fired", "bar_opened"]
+      },
+      {
+        "capability": "recording_feedback",
+        "status": "pass",
+        "duration_ms": 220,
+        "evidence_codes": ["recording_indicator"]
+      },
+      {
+        "capability": "insertion",
+        "status": "pass",
+        "duration_ms": 360,
+        "evidence_codes": ["target_focused", "text_inserted"]
+      },
+      {
+        "capability": "settings",
+        "status": "partial",
+        "duration_ms": 460,
+        "evidence_codes": ["settings_opened"]
+      },
+      {
+        "capability": "history",
+        "status": "fail",
+        "duration_ms": 0,
+        "evidence_codes": ["history_unavailable"]
+      },
+      {
+        "capability": "privacy",
+        "status": "pass",
+        "duration_ms": 140,
+        "evidence_codes": ["local_only_copy"]
+      },
+      {
+        "capability": "recovery",
+        "status": "partial",
+        "duration_ms": 680,
+        "evidence_codes": ["stuck_state"]
+      },
+      {
+        "capability": "multi_display",
+        "status": "fail",
+        "duration_ms": 0,
+        "evidence_codes": ["display_switch_lag"]
+      }
+    ]
+  }
+}

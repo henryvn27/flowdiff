@@ -1,0 +1,23 @@
+{
+  "name": "flowdiff",
+  "version": "0.1.0",
+  "description": "Turn redacted dictation UX traces into a parity report.",
+  "author": {
+    "name": "Henry Van Ness"
+  },
+  "interface": {
+    "displayName": "FlowDiff",
+    "shortDescription": "Make dictation UX parity diffable.",
+    "longDescription": "Compare sanitized dictation-app capability traces locally and get a compact parity matrix with regression gaps, bounded timing deltas, and an explicit redaction contract.",
+    "developerName": "Henry Van Ness",
+    "category": "Productivity",
+    "capabilities": [
+      "Read"
+    ],
+    "defaultPrompt": [
+      "Compare these sanitized dictation UX traces: ",
+      "Validate this redacted dictation trace before sharing: "
+    ]
+  },
+  "mcpServers": "./.mcp.json"
+}
