@@ -480,15 +480,43 @@ h1 span {
 }
 
 .install-note {
+  display: grid;
+  gap: 10px;
   margin: 24px 0 0 60px;
   color: var(--muted);
   font-size: 13px;
   line-height: 1.5;
 }
 
+.setup-inline-code {
+  display: grid;
+  width: min(100%, 520px);
+  grid-template-columns: minmax(0, 1fr) auto;
+  align-items: stretch;
+  overflow: hidden;
+  border: 1px solid var(--line);
+  border-radius: 7px;
+  background: var(--paper-high);
+}
+
 .install-note code {
+  min-width: 0;
+  padding: 12px 14px;
   color: var(--ink);
   font-size: 12px;
+  overflow-wrap: anywhere;
+}
+
+.setup-inline-code .copy-button {
+  min-height: 100%;
+  border-color: var(--line);
+  color: var(--ink);
+}
+
+.setup-inline-code .copy-button:hover,
+.setup-inline-code .copy-button:focus-visible {
+  background: var(--accent);
+  color: var(--paper-high);
 }
 
 .method-layout {
@@ -821,6 +849,10 @@ h1 span {
     margin-left: 0;
   }
 
+  .setup-inline-code {
+    width: 100%;
+  }
+
   .method-steps li {
     grid-template-columns: 34px minmax(0, 1fr);
     gap: 12px;
@@ -865,6 +897,17 @@ h1 span {
   .code-block .copy-button {
     min-height: 42px;
     border-top: 1px solid rgba(245, 241, 233, 0.18);
+    border-left: 0;
+    text-align: left;
+  }
+
+  .setup-inline-code {
+    grid-template-columns: 1fr;
+  }
+
+  .setup-inline-code .copy-button {
+    min-height: 42px;
+    border-top: 1px solid var(--line);
     border-left: 0;
     text-align: left;
   }

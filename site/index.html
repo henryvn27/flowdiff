@@ -128,7 +128,15 @@ cd flowdiff" aria-label="Copy the install commands">
           </li>
         </ol>
 
-        <p class="install-note">For a clean local check, run <code>python3 -m unittest discover -s tests -v</code>.</p>
+        <div class="install-note">
+          <span>Check the setup before using the demo.</span>
+          <div class="setup-inline-code">
+            <code>python3 -m unittest discover -s tests -v</code>
+            <button class="copy-button" type="button" data-copy="python3 -m unittest discover -s tests -v" aria-label="Copy the setup check command">
+              <span data-copy-label aria-live="polite">Copy</span>
+            </button>
+          </div>
+        </div>
       </section>
 
       <section id="method" class="method-section shell" aria-labelledby="method-title">
