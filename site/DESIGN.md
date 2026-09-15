@@ -50,6 +50,9 @@ These are regression rules for future vibecoded project sites:
    or claims that the implementation cannot prove.
 6. Check desktop, narrow layout, keyboard focus, contrast, dark preference, and
    reduced motion before publishing.
+7. Never ship an empty, placeholder, or low-quality icon slot. Use the wordmark
+   alone unless a finished mark materially communicates the product and survives
+   visual review in light, dark, and narrow layouts.
 
 ## Proof-of-concept flow
 

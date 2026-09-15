@@ -79,18 +79,6 @@ button {
   letter-spacing: -0.03em;
 }
 
-.brand-mark {
-  display: grid;
-  width: 29px;
-  height: 29px;
-  place-items: center;
-  border-radius: 6px;
-  background: var(--accent);
-  color: var(--paper-high);
-  font-size: 14px;
-  font-weight: 800;
-}
-
 .site-nav {
   display: flex;
   align-items: center;
@@ -679,10 +667,6 @@ h1 span {
     --terminal-text: #f0eee7;
     --closing-text: #f0eee7;
     --shadow: 0 18px 48px rgba(0, 0, 0, 0.24);
-  }
-
-  .brand-mark {
-    color: #1d201e;
   }
 
   .button-primary {
