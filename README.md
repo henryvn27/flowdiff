@@ -8,8 +8,6 @@ should be repeatable, reviewable, and much less vibes-based.
 
 [Open the FlowDiff site](https://henryvn27.github.io/flowdiff/)
 
-![Synthetic FlowDiff report](docs/flowdiff-demo.svg)
-
 FlowDiff is a local-first Codex plugin and dependency-free Python tool. It
 does not record audio, inspect a screen, read dictated text, open a URL, or
 send data anywhere. Feed it capability outcomes; get a clean report.
@@ -26,7 +24,12 @@ human- or test-authored trace of outcomes, not a dump of computer activity.
 
 ## Quick start
 
-Run the synthetic demo:
+Install the repository locally:
+
+    git clone https://github.com/henryvn27/flowdiff.git
+    cd flowdiff
+
+Run the included synthetic demo:
 
     python3 server.py --demo --format markdown
 
@@ -34,12 +37,14 @@ Run the test suite:
 
     python3 -m unittest discover -s tests -v
 
-The demo contains only the labels Baseline and Candidate plus synthetic
-evidence codes. It creates no files and makes no network requests.
+The clone contains the Codex plugin manifest, dependency-free server, demo,
+and tests. The demo contains only the labels Baseline and Candidate plus
+synthetic evidence codes. It creates no files and makes no network requests.
 
 ## Use it in Codex
 
-Install the plugin from this repository, start a new Codex thread, and ask:
+With the repository installed as a local Codex plugin, start a new Codex
+thread and ask:
 
     Compare these sanitized dictation UX traces.
 
